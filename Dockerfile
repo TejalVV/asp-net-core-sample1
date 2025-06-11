@@ -9,6 +9,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 
 # Copy files from the artifact staging folder on agent
-COPY asp-net-core-sample1/out .
+COPY asp-net-core-sample1/bin/Debug/net8.0 .
 
 ENTRYPOINT ["dotnet", "asp-net-core-sample1.dll"]
