@@ -12,7 +12,7 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o /app/published
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:8.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/published ./
 ENTRYPOINT ["dotnet", "asp-net-core-sample1.dll"]
