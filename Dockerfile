@@ -3,7 +3,7 @@
 # See http://docs.microsoft.com/azure/devops/pipelines/languages/docker for more information
 
 # Create a container with the compiled asp.net core app
-FROM mcr.microsoft.com/dotnet/core/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Create app directory
 WORKDIR /app
